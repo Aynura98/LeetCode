@@ -19,20 +19,16 @@ class Solution(object):
         """
         :type nums: List[int]
         :rtype: List[int]
-        """
-        
-    
-    def squared(self, nums):
-        
+        """      
         for i in range(len(nums)):
             nums[i] = nums[i]*nums[i]   
-
-
-
-        return nums.sort()
+        
+        nums.sort()
+        
+        return nums
 
 if __name__ == "__main__":
    s =  Solution()
-   squared = s.squared([-4,-1,0,3,10])
-   print(squared)
+   result = s.sortedSquares([-4,-1,0,3,10])
+   print(result)
    

@@ -24,17 +24,16 @@ class Solution(object):
         :rtype: bool
         """
         string = str(x)
-        if (len(string)%2) == 1:
-            num_iter = int(len(string)/2) + 1
-        else:
-            num_iter = len(string)/2
-        for i in range(num_iter):
-            if string[i] == string[len(string)-i-1]:
-                pass
+        a = 0
+        b = len(string) - 1
+        while(a < b):
+            if(string[a] == string[b]):
+                a+=1
+                b-=1
             else:
                 return False
-        return True    
 
+        return True
 if __name__ == "__main__":
     s =  Solution()
     result = s.isPalindrome(121)

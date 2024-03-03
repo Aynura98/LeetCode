@@ -34,6 +34,7 @@ class Solution(object):
                 return False
 
         return True
+    
 if __name__ == "__main__":
     s =  Solution()
     result = s.isPalindrome(121)

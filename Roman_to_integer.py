@@ -94,7 +94,7 @@ class Solution(object):
                 result = result + 500
                 i += 1
             elif s[i] == 'M':
-                result = result + 100
+                result = result + 1000
                 i += 1
         return result
     

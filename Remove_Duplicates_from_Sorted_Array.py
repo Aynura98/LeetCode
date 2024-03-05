@@ -43,3 +43,15 @@ class Solution(object):
         :rtype: int
         """
         
+        i = 1
+        while (i <len(nums)):
+            if nums[i] == nums[i-1]:
+                nums.pop(i)
+            else: 
+                i += 1
+        return len(nums)
+
+if __name__ == "__main__":
+    s =  Solution()
+    result = s.removeDuplicates([-1,0,0,0,0,3,3])
+    print(result)

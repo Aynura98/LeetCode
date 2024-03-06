@@ -23,18 +23,20 @@ class Solution(object):
         """
         needle_len = len(needle)
         haystack_len = len(haystack) - needle_len
-        if needle in haystack:
-            if len(needle) == len(haystack):
+        if len(needle) == len(haystack):
+            if(needle == haystack):
                 return 0
-            else:
-                for i in range(haystack_len + 1):
-                    if haystack[i:needle_len] == needle:
-                        return i
-                    else:
-                        i += 1
-                        needle_len += 1
+            else: 
+                return -1
         else:
-            return -1
+            for i in range(haystack_len + 1):
+                if haystack[i:needle_len] == needle:
+                    return i
+                else:
+                    i += 1
+                    needle_len += 1
+        return -1
+        
 
 if __name__ == "__main__":
     s =  Solution()

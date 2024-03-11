@@ -41,8 +41,12 @@ class Solution(object):
                 return False
             
             left_result = helper(root1.left, root2.left)
+            if not left_result:
+                return False 
             right_result = helper(root1.right, root2.right)
-            return left_result and right_result and root1.val == root2.val
+            if not right_result:
+                return False 
+            return root1.val == root2.val
         
         result = helper(p,q)
         return result

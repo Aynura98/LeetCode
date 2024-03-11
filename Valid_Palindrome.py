@@ -46,3 +46,12 @@ if __name__ == "__main__":
     s =  Solution()
     result = s.isPalindrome("A man, a plan, a canal: Panama")
     print(result)   
+    aynura = MyNode(1)
+    ramazan = MyNode(1)
+    child = MyNode(2)
+    aynura.next = ramazan
+    ramazan.next = child
+    
+
+
+

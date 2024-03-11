@@ -23,12 +23,25 @@ class Solution(object):
         :rtype: ListNode
         """
         current = head
-        while head:
-            if current == current.next:
+        if(head == None):
+            return head
+        
+        while current.next != None:
+            if current.val == current.next.val:
+                current.next = current.next.next
+            else:
+                current = current.next
+    
+        return head
                 
 
+class ListNode(object):
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 
 if __name__ == "__main__":
     s =  Solution()
-    result = s.mergeTwoLists([1,2,4], [1,3,4])
+    list = ListNode(1, ListNode(1, ListNode(2, ListNode(3, ListNode(3, None)))))
+    result = s.deleteDuplicates(list)
     print(result)

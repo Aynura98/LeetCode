@@ -53,5 +53,5 @@ class Solution(object):
     
 if __name__ == "__main__":
     s =  Solution()
-    result = s.isSameTree(TreeNode(1, TreeNode(2), None), TreeNode(1, None, TreeNode(3)))
+    result = s.isSameTree(TreeNode(1, TreeNode(2), TreeNode(3)), TreeNode(1, TreeNode(2), TreeNode(3)))
     print(result)   

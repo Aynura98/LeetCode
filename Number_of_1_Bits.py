@@ -13,5 +13,5 @@ class Solution(object):
     
 if __name__ == "__main__":
     s =  Solution()
-    result = s.hammingWeight(11111111111111111111111111111101)
-    print(result)  
+    abc = s.hammingWeight(11111111111111111111111111111101)
+    print(abc)  

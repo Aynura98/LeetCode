@@ -15,8 +15,17 @@ Output: [1,2,3]'''
 # Definition for singly-linked list.
 class ListNode(object):
     def __init__(self, val=0, next=None):
-       self.val = val
-       self.next = next
+        self.val = val
+        self.next = next
+    
+    def asList(self):
+        current = self
+        list = []
+        while current != None:
+            list.append(current.val)
+            current = current.next
+        return list
+
 class Solution(object):
     def deleteDuplicates(self, head):
         """
@@ -33,11 +42,14 @@ class Solution(object):
             else:
                 current = current.next
     
-        return head.next
+        return head
                 
 
 if __name__ == "__main__":
     s =  Solution()
     list = ListNode(1, ListNode(1, ListNode(2, ListNode(3, ListNode(3, None)))))
-    result = s.deleteDuplicates(list)
-    print(result)
+    result = s.deleteDuplicates(None)
+    if(result == None):
+        print("Empty")
+    else:
+        print(result.asList())

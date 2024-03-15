@@ -47,8 +47,8 @@ class Solution(object):
 
 if __name__ == "__main__":
     s =  Solution()
-    list = ListNode(1, ListNode(1, ListNode(2, ListNode(3, ListNode(3, None)))))
-    result = s.deleteDuplicates(None)
+    given_list = ListNode(1, ListNode(1, ListNode(2, ListNode(3, ListNode(3, None)))))
+    result = s.deleteDuplicates(given_list)
     if(result == None):
         print("Empty")
     else:

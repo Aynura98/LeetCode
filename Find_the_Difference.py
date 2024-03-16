@@ -5,15 +5,18 @@ class Solution(object):
         :type t: str
         :rtype: str
         """
-        list1 = []
-        list2 = []
-        for i in range(len(s)):
-            list1.append(s[i])
+       
+        list = []
+       
         for i in range(len(t)):
-            list2.append(t[i])
+            list.append(t[i])
+        for i in range(len(s)):
+            if s[i] in list:
+                list.remove(s[i])
+        return list[0]
 
-        return list2 - list1
+
 if __name__ == "__main__":
     s =  Solution()
-    result = s.findTheDifference(s = "a", t = "aa")
+    result = s.findTheDifference(s = "", t = "y")
     print(result)   

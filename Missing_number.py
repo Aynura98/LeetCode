@@ -8,6 +8,7 @@ class Solution(object):
         for i in range(len(nums) + 1):
             if i not in nums:
                 return i
+            
 if __name__ == "__main__":
     s =  Solution()
     result = s.missingNumber(nums = [0,1])

@@ -21,15 +21,29 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        i = 0
-        j = 0
-        while i < len(s) and j < len(t):
-            if s[i] == t[j]:
-                i+=1
-            j+=1
-        return True if i == len(s) else False
-    
+        if(len(s) == 0):
+            return False
+        
+        if len(s) > len(t):
+            return False
+        
+        if len(s) == len(t):
+            return s == t
+
+        a_i = 0
+        b_i = 0
+        while b_i < len(t) and a_i < len(s):
+            if s[a_i] == t[b_i]:
+                a_i += 1
+                
+            b_i += 1
+            
+
+        return a_i == len(s)
+        
+
+
 if __name__ == "__main__":
     s =  Solution()
-    result = s.isSubsequence(s = "abc", t = "ahbgdc")
+    result = s.isSubsequence(s = "b", t = "abc")
     print(result)   

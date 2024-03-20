@@ -13,7 +13,7 @@ class Solution(object):
             s[j] = a
             i += 1
             j -= 1
-        return s
+        
 if __name__ == "__main__":
     s =  Solution()
     result = s.reverseString(s = ["h","e","l","l","o"])
